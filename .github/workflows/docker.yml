@@ -57,5 +57,5 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           build-args: |
-            apiurl=${{ github.event.inputs.apiurl }}
-            weburl=${{ github.event.inputs.weburl }}
+            WEB_DEFAULT_API=${{ github.event.inputs.WEB_DEFAULT_API }}
+            WEB_HOST=${{ github.event.inputs.WEB_HOST }}
