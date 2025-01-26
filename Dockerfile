@@ -23,8 +23,8 @@ RUN --mount=type=cache,id=pnpm-web,target=/pnpm/store \
     pnpm install --prod=false --frozen-lockfile
 ARG WEB_HOST
 ARG WEB_DEFAULT_API
-ENV WEB_HOST=https://cobalt.nirmata1.net/
-ENV WEB_DEFAULT_API=https://cobalt-api.nirmata1.net/
+ENV WEB_HOST=${WEB_HOST}
+ENV WEB_DEFAULT_API=${WEB_DEFAULT_API}
 RUN pnpm run build
 
 # Merge api+web results
