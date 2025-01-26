@@ -3,14 +3,14 @@ name: Build Docker image
 on:
   workflow_dispatch:
     inputs:
-      apiurl:
+      WEB_DEFAULT_API:
         description: 'API URL to pass as build argument'
         required: true
-        default: 'https://api.example.com'
-      weburl:
+        default: 'https://cobalt-api.example.com'
+      WEB_HOST:
         description: 'Web URL to pass as build argument'
         required: true
-        default: 'https://web.example.com'
+        default: 'https://cobalt.example.com'
 
 env:
   REGISTRY: docker.io
